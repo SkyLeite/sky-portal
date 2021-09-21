@@ -1,0 +1,22 @@
+version: "3.7"
+
+volumes:
+  db-volume:
+
+services:
+  db:
+    image: "postgres:12.4-alpine"
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: sky_portal
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - db-volume:/var/lib/postgresql/data
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080

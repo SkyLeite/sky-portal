@@ -1,0 +1,11 @@
+- /_build/
+- /cover/
+- /deps/
+- /doc/
+- /.fetch/
+- /priv/static/
+- /assets/node_modules/
+- /.direnv
+- npm-debug.log
+- erl_crash.dump
+- *.ez
